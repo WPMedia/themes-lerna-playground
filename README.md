@@ -8,8 +8,8 @@ Goals:
 
 - [x] Publish to GitHub Packages https://github.com/JackHowa?tab=packages&repo_name=lerna-monorepo-components
 - [x] Use fixed version for default publish https://github.com/JackHowa/lerna-monorepo-components/blob/main/lerna.json#L5
+- [x] Publish all for one branch `main` to latest tag
 - [ ] Only publish on changes for one branch `canary`
-- [ ] Publish on `main` branch manually
 
 ## scripts 
 
