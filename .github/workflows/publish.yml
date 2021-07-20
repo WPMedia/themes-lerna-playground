@@ -10,6 +10,8 @@ jobs:
     env:
       NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
       - name: Configure NPM
         run: |
           echo "//npm.pkg.github.com/:_authToken=$NODE_AUTH_TOKEN" > .npmrc
