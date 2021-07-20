@@ -13,6 +13,9 @@ Goals:
 
 
 Want the iteration of version to in the lerna.json to change upon GitHub Action publish.
+
+It seems like --git-tag-no-push can cause problems.
+
 ## scripts 
 
 ### `npm run release`
