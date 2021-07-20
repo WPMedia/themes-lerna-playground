@@ -11,6 +11,8 @@ Goals:
 - [x] Publish all for one branch `stable` to `stable` tag
 - [ ] Only publish on changes for one branch `canary`
 
+
+Want the iteration of version to in the lerna.json to change upon GitHub Action publish.
 ## scripts 
 
 ### `npm run release`
