@@ -1,6 +1,6 @@
 {
   "name": "@thrash-industries/headline",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,6 +11,6 @@
   "repository": "https://github.com/JackHowa/lerna-monorepo-components",
   "publishConfig": {
     "access": "public",
-    "registry":"https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   }
 }
