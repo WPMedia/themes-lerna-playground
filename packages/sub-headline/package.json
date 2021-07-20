@@ -1,5 +1,5 @@
 {
-  "name": "@thrash-industries/sub-headline",
+  "name": "@JackHowa/sub-headline",
   "version": "1.0.5",
   "description": "",
   "main": "index.js",
@@ -16,5 +16,6 @@
     "type": "git",
     "url": "ssh://git@github.com/JackHowa/lerna-monorepo-components.git",
     "directory": "packages/sub-headline"
-  }
+  },
+  "gitHead": "080873d471b95b669035334f093e69d6804921a4"
 }
