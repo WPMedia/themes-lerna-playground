@@ -11,7 +11,7 @@
   },
   "scripts": {
     "release": "lerna publish",
-    "release:force": "lerna publish --force-publish -y",
+    "release:force": "lerna publish --force-publish --no-git-tag-version -y",
     "release:stable": "lerna publish --force-publish --dist-tag stable --no-git-tag-version -y",
     "lerna-version": "lerna version"
   }
