@@ -10,6 +10,9 @@ jobs:
     env:
       NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
     steps:
+      - name: Set git username
+        run: git config --global user.email "jackhowa@hey.com" && git config --global user.name "jackhowa"
+
       - name: Checkout repo
         uses: actions/checkout@v2
       - name: Configure NPM
