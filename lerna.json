@@ -2,13 +2,16 @@
   "packages": [
     "packages/*"
   ],
-  "version": "1.0.7",
+  "version": "1.0.8",
   "command": {
     "publish": {
       "conventionalCommits": true,
       "message": "chore(release): publish",
       "registry": "https://npm.pkg.github.com",
-      "allowBranch": ["stable", "canary"]
+      "allowBranch": [
+        "stable",
+        "canary"
+      ]
     }
   }
 }

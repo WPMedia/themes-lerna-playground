@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.8](https://github.com/JackHowa/lerna-monorepo-components/compare/v1.0.7...v1.0.8) (2021-07-20)
+
+
+### Features
+
+* Fix force publish and npmrc setup ([f0fa026](https://github.com/JackHowa/lerna-monorepo-components/commit/f0fa02662b5a8db7527158d48ce1f20378eda637))
+
+
+
+
+
 ## [1.0.7](https://github.com/JackHowa/lerna-monorepo-components/compare/v1.0.6...v1.0.7) (2021-07-20)
 
 **Note:** Version bump only for package lerna-monorepo-practice
