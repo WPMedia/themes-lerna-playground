@@ -6,6 +6,9 @@
   "devDependencies": {
     "lerna": "^4.0.0"
   },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
+  },
   "scripts": {
     "release": "lerna publish",
     "release:force": "lerna publish --force-publish",
