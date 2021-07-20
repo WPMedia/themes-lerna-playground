@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2021-07-20)
+
+
+### Features
+
+* Add release stable publish ([ef2dff0](https://github.com/JackHowa/lerna-monorepo-components/commit/ef2dff009a3cdec3abdaad7d180a92842fb76217))
+
+
+
+
+
 ## 1.0.14 (2021-07-20)
 
 **Note:** Version bump only for package @JackHowa/sub-headline
