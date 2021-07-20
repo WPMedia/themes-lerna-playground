@@ -6,8 +6,8 @@ Published here https://www.npmjs.com/package/@thrash-industries/headline
 
 Goals: 
 
-- [ ] Publish to GitHub Packages 
-- [x] Use fixed version for default publish
+- [x] Publish to GitHub Packages https://github.com/JackHowa?tab=packages&repo_name=lerna-monorepo-components
+- [x] Use fixed version for default publish https://github.com/JackHowa/lerna-monorepo-components/blob/main/lerna.json#L5
 - [ ] Only publish on changes for one branch `canary`
 - [ ] Publish on `main` branch manually
 
