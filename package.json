@@ -7,6 +7,7 @@
     "lerna": "^4.0.0"
   },
   "scripts": {
-    "release": "lerna publish"
+    "release": "lerna publish",
+    "version": "lerna version"
   }
 }

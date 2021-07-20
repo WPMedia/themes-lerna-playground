@@ -7,3 +7,7 @@
 ### `npm run release`
 
 - Full release
+
+### `npm run version`
+
+- Increment version via lerna https://github.com/lerna/lerna/tree/main/commands/version
