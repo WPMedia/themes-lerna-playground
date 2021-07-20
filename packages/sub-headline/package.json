@@ -8,7 +8,9 @@
   },
   "author": "",
   "license": "ISC",
+  "repository": "https://github.com/JackHowa/lerna-monorepo-components",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry":"https://npm.pkg.github.com"
   }
 }
