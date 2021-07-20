@@ -12,7 +12,7 @@
   "scripts": {
     "release": "lerna publish",
     "release:force": "lerna publish --force-publish -y",
-    "release:stable": "lerna publish --force-publish --dist-tag stable --no-git-tag-version -y",
+    "release:stable": "lerna publish --force-publish --dist-tag stable -y",
     "lerna-version": "lerna version"
   }
 }
