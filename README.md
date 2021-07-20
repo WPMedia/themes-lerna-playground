@@ -2,6 +2,15 @@
 
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
 
+Published here https://www.npmjs.com/package/@thrash-industries/headline 
+
+Goals: 
+
+- [ ] Publish to GitHub Packages 
+- [x] Use fixed version for default publish
+- [ ] Only publish on changes for one branch `canary`
+- [ ] Publish on `main` branch manually
+
 ## scripts 
 
 ### `npm run release`
