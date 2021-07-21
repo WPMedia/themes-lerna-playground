@@ -13,10 +13,8 @@ Goals:
 - [x] Only publish on changes for one branch `canary`. Using version independent. 
 - [x] Make sure that we can still push to the branch https://github.community/t/allowing-github-actions-bot-to-push-to-protected-branch/16536/5 https://github.com/JackHowa/lerna-monorepo-components/runs/3126482038?check_suite_focus=true with push settings
 - [x] On merging stable back to canary, we should ignore changes to package.json. Otherwise, all changed blocks will need to be republished to canary again and the cycle will go on and on. yes! https://github.com/JackHowa/lerna-monorepo-components/runs/3126310013?check_suite_focus=true
+- [ ] If merging into another branch, the approver needs to have write access. But this doesn't seem to be toggleable inside of a non-org repo. https://github.com/JackHowa/lerna-monorepo-components/runs/3126597880?check_suite_focus=true https://github.com/JackHowa/lerna-monorepo-components/pull/6
 
-Want the iteration of version to in the lerna.json to change upon GitHub Action publish.
-
-It seems like --git-tag-no-push can cause problems.
 
 ## scripts 
 
