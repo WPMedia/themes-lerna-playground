@@ -10,7 +10,7 @@ Goals:
 - [x] Use fixed version for default publish https://github.com/JackHowa/lerna-monorepo-components/blob/main/lerna.json#L5
 - [x] Publish all for one branch `stable` to `stable` tag https://github.com/JackHowa/lerna-monorepo-components/runs/3118218953?check_suite_focus=true
 - [ ] Publish really anything (including stable) independently?
-- [ ] Only publish on changes for one branch `canary`. Using version independent
+- [ ] Only publish on changes for one branch `canary`. Using version independent. 
 
 
 Want the iteration of version to in the lerna.json to change upon GitHub Action publish.
@@ -42,6 +42,22 @@ ideally:
 Changes:
  - @JackHowa/headline: 1.1.1 => 1.1.1-canary.1
  - @JackHowa/sub-headline (no change)
+
+ Still seeing: 
+
+https://github.com/JackHowa/lerna-monorepo-components/runs/3124889448?check_suite_focus=true 
+
+ ```
+lerna notice cli v4.0.0
+lerna info versioning independent
+lerna info ci enabled
+lerna info Looking for changed packages since @JackHowa/headline@1.2.0
+lerna info ignoring diff in paths matching [ 'ignored-file', '*.md' ]
+lerna info getChangelogConfig Successfully resolved preset "conventional-changelog-angular"
+lerna info auto-confirmed 
+
+ ```
+
 ### `npm run lerna-version`
 
 - Increment version via lerna https://github.com/lerna/lerna/tree/main/commands/version
