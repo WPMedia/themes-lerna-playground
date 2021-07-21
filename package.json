@@ -12,7 +12,7 @@
   "scripts": {
     "release": "lerna publish",
     "release:force": "lerna publish --force-publish -y",
-    "release:stable": "lerna publish --force-publish --dist-tag stable -y",
+    "release:stable": "lerna publish --dist-tag stable -y",
     "lerna-version:canary": "lerna version prerelease --preid=canary -y",
     "release:canary": "lerna publish --dist-tag canary --canary --preid canary -y",
     "lerna-version": "lerna version"

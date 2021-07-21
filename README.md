@@ -30,7 +30,7 @@ It seems like --git-tag-no-push can cause problems.
 ### `npm run release:stable`
 
 - Only publish packages to stable tag
-- Force publish all packages regardless of changes
+- "release:stable": "lerna publish --dist-tag stable -y", better because no force publishes and only changed ones 
 
 ### `npm run release:canary`
 
