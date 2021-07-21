@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0 (2021-07-21)
+
+
+### Bug Fixes
+
+* Update repo owner per warning lerna ERR! E400 scope 'thrash-industries' in package name '@thrash-industries/headline' does not match repo owner 'JackHowa' in repository element in package.json ([4c28727](https://github.com/WPMedia/themes-lerna-playground/commit/4c28727331da5b1da91b0ddf6a64ef5ad887c911))
+
+
+### Features
+
+* Add subheadline change only there ([fb66ba5](https://github.com/WPMedia/themes-lerna-playground/commit/fb66ba58f8cd50b20038a57c04780c703a558574))
+* Initial setup ([aacbbea](https://github.com/WPMedia/themes-lerna-playground/commit/aacbbea3bb5ac22411b4bae53bcb08e9087ae045))
+* Publish to subhead and headline ([1315f3a](https://github.com/WPMedia/themes-lerna-playground/commit/1315f3af964a8933abc0f5de7282c195ae992f4e))
+
+
+
+
+
 # [1.3.0](https://github.com/JackHowa/lerna-monorepo-components/compare/@JackHowa/sub-headline@1.2.3...@JackHowa/sub-headline@1.3.0) (2021-07-21)
 
 
