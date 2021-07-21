@@ -96,3 +96,10 @@ ideally: should be a prerelease with a canary tag
 
 - Increment version via lerna https://github.com/lerna/lerna/tree/main/commands/version
 - Can't override `npm run version` as it's `lerna ERR! lifecycle "version" errored in "lerna-monorepo-practice", exiting 1`
+
+
+# References 
+
+- Fetch depth lerna issue https://stackoverflow.com/a/60184319/7491536
+- Lerna getting started https://github.com/lerna/lerna#getting-started
+- npmrc within the GitHub Action to push and pull https://viewsource.io/publishing-and-installing-private-github-packages-using-yarn-and-lerna/
