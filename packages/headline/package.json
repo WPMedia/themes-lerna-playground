@@ -1,5 +1,5 @@
 {
-  "name": "@JackHowa/headline",
+  "name": "@WPMedia/testheadline",
   "version": "1.7.0",
   "description": "",
   "main": "index.js",
@@ -14,8 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@github.com/JackHowa/lerna-monorepo-components.git",
+    "url": "ssh://git@github.com/WPMedia/themes-lerna-playground.git",
     "directory": "packages/headline"
-  },
-  "gitHead": "080873d471b95b669035334f093e69d6804921a4"
+  }
 }
