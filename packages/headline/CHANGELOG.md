@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0-canary.0](https://github.com/JackHowa/lerna-monorepo-components/compare/@JackHowa/headline@1.2.5-canary.0...@JackHowa/headline@1.3.0-canary.0) (2021-07-21)
+
+
+### Features
+
+* Update only the headline ([119e029](https://github.com/JackHowa/lerna-monorepo-components/commit/119e029cd8866951b2dbd097454a106c4e054ab3))
+
+
+
+
+
 ## [1.2.5-canary.0](https://github.com/JackHowa/lerna-monorepo-components/compare/@JackHowa/headline@1.2.4...@JackHowa/headline@1.2.5-canary.0) (2021-07-21)
 
 **Note:** Version bump only for package @JackHowa/headline
