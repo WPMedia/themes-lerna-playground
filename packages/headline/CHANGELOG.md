@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.8.0 (2021-07-21)
+
+
+### Bug Fixes
+
+* Manually iterate per botched push and cause actual canary change ([8b631a8](https://github.com/WPMedia/themes-lerna-playground/commit/8b631a811c635322fee96d3abb3a463d8743f638))
+* Only one change for headline component, not description ([3352801](https://github.com/WPMedia/themes-lerna-playground/commit/335280181056c67429871783c6fd13888d09bd11))
+* Update repo owner per warning lerna ERR! E400 scope 'thrash-industries' in package name '@thrash-industries/headline' does not match repo owner 'JackHowa' in repository element in package.json ([4c28727](https://github.com/WPMedia/themes-lerna-playground/commit/4c28727331da5b1da91b0ddf6a64ef5ad887c911))
+
+
+### Features
+
+* Initial setup ([aacbbea](https://github.com/WPMedia/themes-lerna-playground/commit/aacbbea3bb5ac22411b4bae53bcb08e9087ae045))
+* Publish to subhead and headline ([1315f3a](https://github.com/WPMedia/themes-lerna-playground/commit/1315f3af964a8933abc0f5de7282c195ae992f4e))
+* Push to canary directly ([6b8fa7b](https://github.com/WPMedia/themes-lerna-playground/commit/6b8fa7b93ef5644a276c2e3d112adf5b5b187044))
+* Update only the headline ([119e029](https://github.com/WPMedia/themes-lerna-playground/commit/119e029cd8866951b2dbd097454a106c4e054ab3))
+* Use js change ([18c17e7](https://github.com/WPMedia/themes-lerna-playground/commit/18c17e7bc6926e8e9161f77f3148078c1d939a56))
+
+
+
+
+
 # 1.7.0 (2021-07-21)
 
 
