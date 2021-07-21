@@ -9,8 +9,8 @@ Goals:
 - [x] Publish to GitHub Packages https://github.com/JackHowa?tab=packages&repo_name=lerna-monorepo-components
 - [x] Use fixed version for default publish https://github.com/JackHowa/lerna-monorepo-components/blob/main/lerna.json#L5
 - [x] Publish all for one branch `stable` to `stable` tag https://github.com/JackHowa/lerna-monorepo-components/runs/3118218953?check_suite_focus=true
-- [ ] Publish really anything (including stable) independently?
-- [ ] Only publish on changes for one branch `canary`. Using version independent. 
+- [x] Publish really anything (including stable) independently?
+- [x] Only publish on changes for one branch `canary`. Using version independent. 
 - [ ] Make sure that we can still push to the branch https://github.community/t/allowing-github-actions-bot-to-push-to-protected-branch/16536/5
 - [ ] On merging stable back to canary, we should ignore changes to package.json. Otherwise, all changed blocks will need to be republished to canary again and the cycle will go on and on.
 
