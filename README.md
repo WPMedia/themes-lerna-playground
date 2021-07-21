@@ -44,54 +44,44 @@ Changes:
  - @JackHowa/headline: 1.1.1 => 1.1.1-canary.1
  - @JackHowa/sub-headline (no change)
 
- Still seeing: 
-
-https://github.com/JackHowa/lerna-monorepo-components/runs/3124889448?check_suite_focus=true 
-
- ```
-lerna notice cli v4.0.0
 lerna info versioning independent
+
+successful: 
+
 lerna info ci enabled
-lerna info Looking for changed packages since @JackHowa/headline@1.2.0
+lerna info canary enabled
+lerna info Looking for changed packages since 119e029^..119e029
 lerna info ignoring diff in paths matching [ 'ignored-file', '*.md' ]
-lerna info getChangelogConfig Successfully resolved preset "conventional-changelog-angular"
+Found 1 package to publish:
+ - @JackHowa/headline => 1.2.3-canary.14+119e029
+
 lerna info auto-confirmed 
+lerna info publish Publishing packages to npm...
+lerna notice Skipping all user and access validation due to third-party registry
+lerna notice Make sure you're authenticated properly ¯\_(ツ)_/¯
+lerna http fetch PUT 200 https://npm.pkg.github.com/@JackHowa%2fheadline 1472ms
+lerna success published @JackHowa/headline 1.2.3-canary.14+119e029
+lerna notice 
+lerna notice 📦  @JackHowa/headline@1.2.3-canary.14+119e029
+lerna notice === Tarball Contents === 
+lerna notice 1.1kB LICENSE     
+lerna notice 122B  index.js    
+lerna notice 537B  package.json
+lerna notice 3.3kB CHANGELOG.md
+lerna notice === Tarball Details === 
+lerna notice name:          @JackHowa/headline                           
+lerna notice version:       1.2.3-canary.14+119e029                      
+lerna notice filename:      JackHowa-headline-1.2.3-canary.14+119e029.tgz
+lerna notice package size:  1.9 kB                                       
+lerna notice unpacked size: 5.0 kB                                       
+lerna notice shasum:        283eb794d59e3cd28235afe7c909b31b551a2d7b     
+lerna notice integrity:     sha512-r1GL66ZYcZBVJ[...]21UvEiaAxQDWg==     
+lerna notice total files:   4                                            
+lerna notice 
+Successfully published:
+ - @JackHowa/headline@1.2.3-canary.14+119e029
+lerna success published 1 package
 
- ```
-
- now seeing (no changes): 
-
- ```
-Run npm run release:canary
-  npm run release:canary
-  shell: /usr/bin/bash -e {0}
-  env:
-    NODE_AUTH_TOKEN: ***
-
-> lerna-monorepo-practice@1.0.0 release:canary /home/runner/work/lerna-monorepo-components/lerna-monorepo-components
-> lerna publish --dist-tag canary -y
-
-lerna notice cli v4.0.0
-lerna info versioning independent
-lerna info ci enabled
-lerna info Looking for changed packages since @JackHowa/headline@1.2.2
-lerna info ignoring diff in paths matching [ 'ignored-file', '*.md' ]
-lerna success No changed packages to publish 
-
- ```
-
-
- only change of one package (https://github.com/JackHowa/lerna-monorepo-components/runs/3124961701?check_suite_focus=true):
-
-```
-
-Changes:
-lerna info auto-confirmed 
- - @JackHowa/headline: 1.2.2 => 1.2.3
-
-```
-
-ideally: should be a prerelease with a canary tag
 
 ### `npm run lerna-version`
 
