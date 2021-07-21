@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.4](https://github.com/JackHowa/lerna-monorepo-components/compare/@JackHowa/headline@1.2.3...@JackHowa/headline@1.2.4) (2021-07-21)
+
+**Note:** Version bump only for package @JackHowa/headline
+
+
+
+
+
 ## [1.2.3](https://github.com/JackHowa/lerna-monorepo-components/compare/@JackHowa/headline@1.2.2...@JackHowa/headline@1.2.3) (2021-07-21)
 
 
