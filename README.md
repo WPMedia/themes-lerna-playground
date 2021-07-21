@@ -58,6 +58,27 @@ lerna info auto-confirmed
 
  ```
 
+ now seeing (no changes): 
+
+ ```
+Run npm run release:canary
+  npm run release:canary
+  shell: /usr/bin/bash -e {0}
+  env:
+    NODE_AUTH_TOKEN: ***
+
+> lerna-monorepo-practice@1.0.0 release:canary /home/runner/work/lerna-monorepo-components/lerna-monorepo-components
+> lerna publish --dist-tag canary -y
+
+lerna notice cli v4.0.0
+lerna info versioning independent
+lerna info ci enabled
+lerna info Looking for changed packages since @JackHowa/headline@1.2.2
+lerna info ignoring diff in paths matching [ 'ignored-file', '*.md' ]
+lerna success No changed packages to publish 
+
+ ```
+
 ### `npm run lerna-version`
 
 - Increment version via lerna https://github.com/lerna/lerna/tree/main/commands/version
