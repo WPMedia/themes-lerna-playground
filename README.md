@@ -79,6 +79,19 @@ lerna success No changed packages to publish
 
  ```
 
+
+ only change of one package (https://github.com/JackHowa/lerna-monorepo-components/runs/3124961701?check_suite_focus=true):
+
+```
+
+Changes:
+lerna info auto-confirmed 
+ - @JackHowa/headline: 1.2.2 => 1.2.3
+
+```
+
+ideally: should be a prerelease with a canary tag
+
 ### `npm run lerna-version`
 
 - Increment version via lerna https://github.com/lerna/lerna/tree/main/commands/version
