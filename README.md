@@ -97,7 +97,10 @@ ideally: should be a prerelease with a canary tag
 - Increment version via lerna https://github.com/lerna/lerna/tree/main/commands/version
 - Can't override `npm run version` as it's `lerna ERR! lifecycle "version" errored in "lerna-monorepo-practice", exiting 1`
 
+### `npm run lerna-version:canary`
 
+- Increment the prerelease version once forward with canary ahead of `release:canary`
+- note: `If you have any packages with a prerelease version number (e.g. 2.0.0-beta.3) and you run lerna version with and a non-prerelease bump (major, minor, or patch), it will publish those previously pre-released packages as well as the packages that have changed since the last release.` https://github.com/lerna/lerna/tree/main/commands/version#prerelease
 # References 
 
 - Fetch depth lerna issue https://stackoverflow.com/a/60184319/7491536
