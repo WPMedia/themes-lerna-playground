@@ -12,6 +12,7 @@ Goals:
 - [ ] Publish really anything (including stable) independently?
 - [ ] Only publish on changes for one branch `canary`. Using version independent. 
 - [ ] Make sure that we can still push to the branch https://github.community/t/allowing-github-actions-bot-to-push-to-protected-branch/16536/5
+- [ ] On merging stable back to canary, we should ignore changes to package.json. Otherwise, all changed blocks will need to be republished to canary again and the cycle will go on and on.
 
 Want the iteration of version to in the lerna.json to change upon GitHub Action publish.
 
