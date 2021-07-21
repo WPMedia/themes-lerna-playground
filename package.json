@@ -10,11 +10,7 @@
     "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
-    "release": "lerna publish",
-    "release:force": "lerna publish --force-publish -y",
     "release:stable": "lerna publish --dist-tag stable minor -y",
-    "lerna-version:canary": "lerna version prerelease --preid=canary -y",
-    "release:canary": "lerna publish --dist-tag canary --canary --preid canary -y",
-    "lerna-version": "lerna version"
+    "release:canary": "lerna publish --dist-tag canary --canary --preid canary -y"
   }
 }
