@@ -29,9 +29,6 @@ jobs:
 
       - name: Install
         run: npm ci
-    
-      - name: Version changed files with canary prerelease
-        run: npm run lerna-version:canary
 
       - name: Publish to canary
         run: npm run release:canary
