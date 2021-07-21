@@ -36,6 +36,7 @@ It seems like --git-tag-no-push can cause problems.
 
 - Only publish packages to canary tag
 - Publish packages based on only changes
+- Iterates the prerelease version using `--canary` arg that allows prerelease (not necessarily canary) https://github.com/lerna/lerna/tree/main/commands/publish#--canary https://github.com/lerna/lerna/tree/main/commands/publish#--preid
 
 ideally: 
 
@@ -98,6 +99,8 @@ ideally: should be a prerelease with a canary tag
 - Can't override `npm run version` as it's `lerna ERR! lifecycle "version" errored in "lerna-monorepo-practice", exiting 1`
 
 ### `npm run lerna-version:canary`
+
+UPDATE: this is not what we want. This does not publish to canary tag (https://github.com/JackHowa/lerna-monorepo-components/runs/3125908320?check_suite_focus=true)
 
 - Increment the prerelease version once forward with canary ahead of `release:canary`
 - note: `If you have any packages with a prerelease version number (e.g. 2.0.0-beta.3) and you run lerna version with and a non-prerelease bump (major, minor, or patch), it will publish those previously pre-released packages as well as the packages that have changed since the last release.` https://github.com/lerna/lerna/tree/main/commands/version#prerelease
