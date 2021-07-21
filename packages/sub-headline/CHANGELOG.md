@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/JackHowa/lerna-monorepo-components/compare/@JackHowa/sub-headline@1.2.3...@JackHowa/sub-headline@1.3.0) (2021-07-21)
+
+
+### Features
+
+* Add subheadline change only there ([fb66ba5](https://github.com/JackHowa/lerna-monorepo-components/commit/fb66ba58f8cd50b20038a57c04780c703a558574))
+
+
+
+
+
 ## [1.2.3](https://github.com/JackHowa/lerna-monorepo-components/compare/@JackHowa/sub-headline@1.2.2...@JackHowa/sub-headline@1.2.3) (2021-07-21)
 
 **Note:** Version bump only for package @JackHowa/sub-headline
