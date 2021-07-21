@@ -13,6 +13,7 @@
     "release": "lerna publish",
     "release:force": "lerna publish --force-publish -y",
     "release:stable": "lerna publish --force-publish --dist-tag stable -y",
+    "release:canary": "lerna publish --dist-tag canary -y",
     "lerna-version": "lerna version"
   }
 }
