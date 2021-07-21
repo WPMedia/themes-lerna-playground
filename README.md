@@ -31,7 +31,7 @@ It seems like --git-tag-no-push can cause problems.
 
 - Only publish packages to stable tag
 - "release:stable": "lerna publish --dist-tag stable -y", better because no force publishes and only changed ones 
-- ideally should go from:
+- ideally should go from: (done https://github.com/JackHowa/lerna-monorepo-components/runs/3126215436?check_suite_focus=true)
 
  - @JackHowa/headline: 1.2.5-canary.0 => 1.2.6
 
