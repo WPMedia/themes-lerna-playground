@@ -31,6 +31,9 @@ It seems like --git-tag-no-push can cause problems.
 
 - Only publish packages to stable tag
 - "release:stable": "lerna publish --dist-tag stable -y", better because no force publishes and only changed ones 
+- ideally should go from:
+
+ - @JackHowa/headline: 1.2.5-canary.0 => 1.2.6
 
 ### `npm run release:canary`
 
