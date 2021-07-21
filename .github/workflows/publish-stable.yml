@@ -15,6 +15,12 @@ jobs:
 
       - name: Checkout repo
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+        
+      # pulls all tags (needed for lerna / semantic release to correctly version)
+      - name: Pull tags to give lerna access to git info
+        run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
 
       - name: Configure NPM
         run: |
