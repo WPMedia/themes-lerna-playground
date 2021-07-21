@@ -9,7 +9,8 @@ Goals:
 - [x] Publish to GitHub Packages https://github.com/JackHowa?tab=packages&repo_name=lerna-monorepo-components
 - [x] Use fixed version for default publish https://github.com/JackHowa/lerna-monorepo-components/blob/main/lerna.json#L5
 - [x] Publish all for one branch `stable` to `stable` tag https://github.com/JackHowa/lerna-monorepo-components/runs/3118218953?check_suite_focus=true
-- [ ] Only publish on changes for one branch `canary`
+- [ ] Publish really anything (including stable) independently?
+- [ ] Only publish on changes for one branch `canary`. Using version independent
 
 
 Want the iteration of version to in the lerna.json to change upon GitHub Action publish.
