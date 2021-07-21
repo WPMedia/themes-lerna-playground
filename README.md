@@ -11,7 +11,7 @@ Goals:
 - [x] Publish all for one branch `stable` to `stable` tag https://github.com/JackHowa/lerna-monorepo-components/runs/3118218953?check_suite_focus=true
 - [ ] Publish really anything (including stable) independently?
 - [ ] Only publish on changes for one branch `canary`. Using version independent. 
-
+- [ ] Make sure that we can still push to the branch https://github.community/t/allowing-github-actions-bot-to-push-to-protected-branch/16536/5
 
 Want the iteration of version to in the lerna.json to change upon GitHub Action publish.
 
