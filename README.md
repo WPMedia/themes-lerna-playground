@@ -35,6 +35,12 @@ It seems like --git-tag-no-push can cause problems.
 
 - Only publish packages to canary tag
 - Publish packages based on only changes
+
+ideally: 
+
+Changes:
+ - @JackHowa/headline: 1.1.1 => 1.1.1-canary.1
+ - @JackHowa/sub-headline (no change)
 ### `npm run lerna-version`
 
 - Increment version via lerna https://github.com/lerna/lerna/tree/main/commands/version
