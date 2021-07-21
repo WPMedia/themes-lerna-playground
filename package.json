@@ -13,7 +13,7 @@
     "release": "lerna publish",
     "release:force": "lerna publish --force-publish -y",
     "release:stable": "lerna publish --force-publish --dist-tag stable -y",
-    "lerna-version:canary": "lerna version prerelease --preid=canary",
+    "lerna-version:canary": "lerna version prerelease --preid=canary -y",
     "release:canary": "lerna publish --dist-tag canary -y",
     "lerna-version": "lerna version"
   }
