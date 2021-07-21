@@ -9,9 +9,10 @@ Goals:
 - [x] Publish to GitHub Packages https://github.com/JackHowa?tab=packages&repo_name=lerna-monorepo-components
 - [x] Use fixed version for default publish https://github.com/JackHowa/lerna-monorepo-components/blob/main/lerna.json#L5
 - [x] Publish all for one branch `stable` to `stable` tag https://github.com/JackHowa/lerna-monorepo-components/runs/3118218953?check_suite_focus=true
-- [ ] Publish really anything (including stable) independently?
-- [ ] Only publish on changes for one branch `canary`. Using version independent. 
+- [x] Publish really anything (including stable) independently?
+- [x] Only publish on changes for one branch `canary`. Using version independent. 
 - [ ] Make sure that we can still push to the branch https://github.community/t/allowing-github-actions-bot-to-push-to-protected-branch/16536/5
+- [ ] On merging stable back to canary, we should ignore changes to package.json. Otherwise, all changed blocks will need to be republished to canary again and the cycle will go on and on.
 
 Want the iteration of version to in the lerna.json to change upon GitHub Action publish.
 
@@ -31,7 +32,7 @@ It seems like --git-tag-no-push can cause problems.
 
 - Only publish packages to stable tag
 - "release:stable": "lerna publish --dist-tag stable -y", better because no force publishes and only changed ones 
-- ideally should go from:
+- ideally should go from: (done https://github.com/JackHowa/lerna-monorepo-components/runs/3126215436?check_suite_focus=true)
 
  - @JackHowa/headline: 1.2.5-canary.0 => 1.2.6
 
