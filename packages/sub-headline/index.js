@@ -3,7 +3,7 @@ import React from 'react';
 function SubHeadline({ children }) {
   return (
     <h2>
-      {children}
+      {children}new pt 2
     </h2>
   );
 }
