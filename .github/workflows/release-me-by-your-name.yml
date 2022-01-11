@@ -9,11 +9,11 @@ on:
 jobs:
   publish:
     name: All block publish
-    if: github.events.inputs.release_tag != 'canary' && github.events.inputs.release_tag != 'rc' && github.events.inputs.release_tag != 'hotfix' && github.events.inputs.release_tag != 'beta' && github.events.inputs.release_tag != 'stable' && github.events.inputs.release_tag != 'latest'
+    if: github.event.inputs.release_tag != 'canary' && github.event.inputs.release_tag != 'rc' && github.event.inputs.release_tag != 'hotfix' && github.event.inputs.release_tag != 'beta' && github.event.inputs.release_tag != 'stable' && github.event.inputs.release_tag != 'latest'
     runs-on: ubuntu-latest
     env:
       NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
-      RELEASE_TAG: ${{ github.events.inputs.release_tag }}
+      RELEASE_TAG: ${{ github.event.inputs.release_tag }}
 
     steps:
       - name: Checkout repo
@@ -35,8 +35,8 @@ jobs:
 
       - name: Show variables set
         run: |
-          echo "Target tag: ${{ github.events.inputs.release_tag }}"
-          echo "All inputs ${{ github.events.inputs }}"
+          echo "Target tag: ${{ github.event.inputs.release_tag }}"
+          echo "All inputs ${{ github.event.inputs }}"
           echo "All env ${{ env }}"
   
       - name: Get current datetime for re-running publish if necessary
