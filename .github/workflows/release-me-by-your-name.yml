@@ -14,16 +14,15 @@ jobs:
       NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
       RELEASE_TAG: github.events.inputs.release_tag
 
-    steps:
-      - name: Ensure inputted tag is valid
-        if: |
-          RELEASE_TAG != 'canary' 
-          && RELEASE_TAG != 'rc' 
-          && RELEASE_TAG != 'hotfix' 
-          && RELEASE_TAG != 'beta'
-          && RELEASE_TAG != 'stable'
-          && RELEASE_TAG != 'latest'
+    if: |
+      RELEASE_TAG != 'canary' 
+      && RELEASE_TAG != 'rc' 
+      && RELEASE_TAG != 'hotfix' 
+      && RELEASE_TAG != 'beta'
+      && RELEASE_TAG != 'stable'
+      && RELEASE_TAG != 'latest'
 
+    steps:
       - name: Checkout repo
         uses: actions/checkout@v2
 
