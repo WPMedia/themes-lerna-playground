@@ -42,13 +42,13 @@ jobs:
 
       - name: Show variables set
         run: |
-          echo "Target tag: ${{ RELEASE_TAG }}"
+          echo "Target tag: ${{ env.RELEASE_TAG }}"
   
       - name: Get current datetime for re-running publish if necessary
         id: get-datetime
         run: echo "::set-output name=date::$(date +'%Y%m%d%H%M%S')"
 
       - name: Publish all to tag name specified
-        run: npx lerna publish 0.0.0-${{ RELEASE_TAG }}.$(git rev-parse --short HEAD).${{ steps.get-datetime.outputs.date }} --no-git-tag-version --no-push --dist-tag ${{ RELEASE_TAG }} --yes
+        run: npx lerna publish 0.0.0-${{ env.RELEASE_TAG }}.$(git rev-parse --short HEAD).${{ steps.get-datetime.outputs.date }} --no-git-tag-version --no-push --dist-tag ${{ env.RELEASE_TAG }} --yes
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
