@@ -7,16 +7,6 @@ on:
         required: true
 
 jobs:
-  check_valid_tag:
-    name: Ensure release tag is valid
-    runs-on: ubuntu-latest
-    env:
-      RELEASE_TAG: ${{ github.event.inputs.release_tag }}
-    
-    steps:
-      - name: Ensure release tag matches allowed tags
-        if: env.RELEASE_TAG != 'canary' && env.RELEASE_TAG != 'rc' && env.RELEASE_TAG != 'hotfix' && env.RELEASE_TAG != 'beta' && env.RELEASE_TAG != 'stable' && env.RELEASE_TAG != 'latest'
-
   publish:
     name: All block publish
     runs-on: ubuntu-latest
@@ -24,6 +14,7 @@ jobs:
     env:
       NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
       RELEASE_TAG: ${{ github.event.inputs.release_tag }}
+    if: env.RELEASE_TAG != 'canary' && env.RELEASE_TAG != 'rc' && env.RELEASE_TAG != 'hotfix' && env.RELEASE_TAG != 'beta' && env.RELEASE_TAG != 'stable' && env.RELEASE_TAG != 'latest'
 
     steps:
       - name: Checkout repo
