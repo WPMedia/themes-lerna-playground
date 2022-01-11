@@ -7,13 +7,23 @@ on:
         required: true
 
 jobs:
+  check_valid_tag:
+    name: Ensure release tag is valid
+    runs-on: ubuntu-latest
+    env:
+      RELEASE_TAG: ${{ github.event.inputs.release_tag }}
+    
+    steps:
+      - name: Ensure release tag matches allowed tags
+        if: env.RELEASE_TAG != 'canary' && env.RELEASE_TAG != 'rc' && env.RELEASE_TAG != 'hotfix' && env.RELEASE_TAG != 'beta' && env.RELEASE_TAG != 'stable' && env.RELEASE_TAG != 'latest'
+
   publish:
     name: All block publish
     runs-on: ubuntu-latest
+    needs: check_valid_tag
     env:
       NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
       RELEASE_TAG: ${{ github.event.inputs.release_tag }}
-    if: $RELEASE_TAG != 'canary' && $RELEASE_TAG != 'rc' && $RELEASE_TAG != 'hotfix' && $RELEASE_TAG != 'beta' && $RELEASE_TAG != 'stable' && $RELEASE_TAG != 'latest'
 
     steps:
       - name: Checkout repo
@@ -35,8 +45,8 @@ jobs:
 
       - name: Show variables set
         run: |
-          echo $RELEASE_TAG
-          echo "All inputs ${{ github.event.inputs.release_tag }}"
+          echo "env.RELEASE_TAG: ${{ env.RELEASE_TAG }}"
+          echo "Input ${{ github.event.inputs.release_tag }}"
   
       - name: Get current datetime for re-running publish if necessary
         id: get-datetime
