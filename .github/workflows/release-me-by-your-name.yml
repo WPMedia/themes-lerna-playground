@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
-      RELEASE_TAG: github.events.inputs.release_tag
+      RELEASE_TAG: ${{ github.events.inputs.release_tag }}
 
     if: |
       github.events.inputs.release_tag != 'canary' 
@@ -48,7 +48,7 @@ jobs:
         id: get-datetime
         run: echo "::set-output name=date::$(date +'%Y%m%d%H%M%S')"
 
-      - name: Publish all to tag name specified
-        run: npx lerna publish 0.0.0-${{ env.RELEASE_TAG }}.$(git rev-parse --short HEAD).${{ steps.get-datetime.outputs.date }} --no-git-tag-version --no-push --dist-tag ${{ env.RELEASE_TAG }} --yes
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Publish all to tag name specified
+      #   run: npx lerna publish 0.0.0-${{ env.RELEASE_TAG }}.$(git rev-parse --short HEAD).${{ steps.get-datetime.outputs.date }} --no-git-tag-version --no-push --dist-tag ${{ env.RELEASE_TAG }} --yes
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
