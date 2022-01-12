@@ -1,4 +1,4 @@
-name: Publish to target tag f
+name: Publish to target tag f canary sync
 on:
   push:
     branches:

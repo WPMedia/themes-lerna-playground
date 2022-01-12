@@ -1,4 +1,4 @@
-name: Publish to target tag f
+name: Publish to target tag f stable sync
 on:
   push:
     branches:
