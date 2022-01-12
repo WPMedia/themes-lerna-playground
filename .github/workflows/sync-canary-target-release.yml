@@ -1,4 +1,4 @@
-name: Publish to target tag f canary sync
+name: Publish to target tag release-a with canary sync
 on:
   push:
     branches:
@@ -34,5 +34,5 @@ jobs:
       - name: Install
         run: npm ci
 
-      - name: Publish to target tag "f"
-        run: npx lerna publish --dist-tag f --canary --preid f -y
+      - name: Publish to target tag "release-a"
+        run: npx lerna publish --dist-tag release-a --canary --preid release-a -y
