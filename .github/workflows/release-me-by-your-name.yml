@@ -33,11 +33,6 @@ jobs:
       - name: Run all tests
         run: npm run test
 
-      - name: Show variables set
-        run: |
-          echo "env.RELEASE_TAG: ${{ env.RELEASE_TAG }}"
-          echo "Input ${{ github.event.inputs.release_tag }}"
-  
       - name: Get current datetime for re-running publish if necessary
         id: get-datetime
         run: echo "::set-output name=date::$(date +'%Y%m%d%H%M%S')"
