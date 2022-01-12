@@ -26,12 +26,13 @@ jobs:
         with:
           node-version: '12'
           registry-url: 'https://npm.pkg.github.com'
+          
 
       - name: Install lerna
         run: npm i -g lerna
 
-      - name: Show versions of target tag 
-        run: lerna ls --all --json | jq -r '.[] | .version' | grep ${{ env.TARGET_RELEASE_TAG }}
+      # - name: Show versions of target tag 
+      #   run: lerna ls --all --json | jq -r '.[] | .version' | grep ${{ env.TARGET_RELEASE_TAG }}
 
       - name: Show versions of target individual one
         run: lerna exec --no-bail --parallel -- npm view \${LERNA_PACKAGE_NAME}@\${ env.TARGET_RELEASE_TAG } version
