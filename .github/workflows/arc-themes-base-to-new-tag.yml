@@ -18,7 +18,9 @@ jobs:
       NEW_RELEASE_TAG: arc-themes-release-${{ github.event.inputs.new_release_tag }}
     # ensure new and target release tags match regex: 
     # {number}.{number} per product
-    if: contains(github.event.inputs.target_release_tag, '[0-9].[0-9]') && contains(github.event.inputs.new_release_tag, '[0-9].[0-9]')
+    # +: Matches one or more of the preceding character.
+    # [0-9]: Matches digits
+    if: contains(github.event.inputs.target_release_tag, '[0-9]+.[0-9]+') && contains(github.event.inputs.new_release_tag, '[0-9]+.[0-9]+')
 
     steps:
       - name: Checkout repo
