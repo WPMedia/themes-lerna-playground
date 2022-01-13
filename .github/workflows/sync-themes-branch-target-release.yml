@@ -6,8 +6,8 @@ on:
       # arc-themes-release-{numbers}.{numbers} per product
       - arc-themes-release-[0-9]+\.[0-9]+
     # only run on changes to these files
-    paths:
-      - '**.js'
+    # paths:
+    #   - '**.js'
 
 jobs:
   publish:
