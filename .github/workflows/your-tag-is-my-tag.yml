@@ -44,6 +44,6 @@ jobs:
       #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Get version of target tag and point the new tag to that version
-        run: npx lerna exec --no-bail --parallel -- npm dist-tag add \${LERNA_PACKAGE_NAME}@$(npm view ${LERNA_PACKAGE_NAME}@${{env.TARGET_RELEASE_TAG}} version) ${{ env.NEW_RELEASE_TAG }}        
+        run: npx lerna exec --no-bail --parallel -- npm dist-tag add \${LERNA_PACKAGE_NAME}@$(npm view ${LERNA_PACKAGE_NAME}${{env.TARGET_RELEASE_TAG}} version) ${{ env.NEW_RELEASE_TAG }}        
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
