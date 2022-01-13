@@ -13,7 +13,8 @@ jobs:
   validate_tags:
     name: Validate release numbers
     runs-on: ubuntu-latest
-
+    # ensure new and target release tags match regex: 
+    # {numbers}.{numbers} requirement per product
     steps:
       - name: Check target release tag name
         id: check-target-tag
@@ -28,11 +29,7 @@ jobs:
           if [[ ${{ github.event.inputs.new_release_tag }} =~ ^([0-9]+)\.([0-9]+)\.?$ ]]; then
               echo ::set-output name=match::true
           fi
-      
-      # ensure new and target release tags match regex: 
-      # {number}.{number} per product
-      # +: Matches one or more of the preceding character.
-      # [0-9]: Matches digits
+
       - name: Validate release tag numbers
         id: validate-release-tag-numbers
         if: steps.check-target-tag.outputs.match != 'true' && steps.check-new-tag.outputs.match != 'true'
@@ -44,6 +41,7 @@ jobs:
   retag:
     name: Tag base tag to new tag
     runs-on: ubuntu-latest
+    # previous and any future jobs need this needs property
     needs: validate_tags
     env: 
       TARGET_RELEASE_TAG: arc-themes-release-${{ github.event.inputs.target_release_tag }}
