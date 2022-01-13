@@ -11,11 +11,8 @@ on:
 
 jobs:
   validate_tags:
-    name: Tag all versions of another tag this new tag
+    name: Validate release numbers
     runs-on: ubuntu-latest
-    env: 
-      TARGET_RELEASE_TAG: arc-themes-release-${{ github.event.inputs.target_release_tag }}
-      NEW_RELEASE_TAG: arc-themes-release-${{ github.event.inputs.new_release_tag }}
 
     steps:
       - name: Check target release tag name
@@ -61,6 +58,6 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           
       - name: Get version of target tag and point the new tag to that version
-        run: npx lerna exec --stream --no-bail --concurrency 1 -- 'PKG_VERSION=$(npm v . dist-tags.${{ env.TARGET_RELEASE_TAG }}); [ -n "$PKG_VERSION" ] && (npm dist-tag add ${LERNA_PACKAGE_NAME}@${PKG_VERSION} ${{ env.NEW_RELEASE_TAG }}) || exit 0'
+        run: npx lerna exec --stream --no-bail --concurrency 1 -- 'PKG_VERSION=$(npm view ${LERNA_PACKAGE_NAME}@${{ env.TARGET_RELEASE_TAG }} version); [ -n "$PKG_VERSION" ] && (npm dist-tag add ${LERNA_PACKAGE_NAME}@${PKG_VERSION} ${{ env.NEW_RELEASE_TAG }}) || exit 0'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
