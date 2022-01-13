@@ -6,15 +6,15 @@ on:
       # arc-themes-release-{numbers}.{numbers} per product
       - arc-themes-release-[0-9]+\.[0-9]+
     # only run on changes to these files
-    # paths:
-    #   - '**.js'
+    paths:
+      - '**.js'
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     env:
       NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
-      SYNCED_RELEASE_TAG: ${{ github.event.ref }}
+      SYNCED_RELEASE_TAG: ${{ github.ref_name }} # targets branch name ref_name
     steps:
       - name: Set git username
         run: git config --global user.email "jack.howard@washpost.com" && git config --global user.name "Jack Howard"
@@ -25,23 +25,14 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.NODE_AUTH_TOKEN }}
         
-      - name: Show branch names
-        run: |
-          echo "ref_name"
-          echo github.ref_name
-          echo "ref"
-          echo github.ref
       # pulls all tags (needed for lerna / semantic release to correctly version)
-      # - name: Pull tags to give lerna access to git info
-      #   run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+      - name: Pull tags to give lerna access to git info
+        run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
 
-      # - name: Configure NPM
-      #   run: |
-      #     echo "//npm.pkg.github.com/:_authToken=$NODE_AUTH_TOKEN" > .npmrc
-      #     echo '@wpmedia:registry=https://npm.pkg.github.com' >> .npmrc
+      - name: Configure NPM
+        run: |
+          echo "//npm.pkg.github.com/:_authToken=$NODE_AUTH_TOKEN" > .npmrc
+          echo '@wpmedia:registry=https://npm.pkg.github.com' >> .npmrc
 
-      # - name: Install
-      #   run: npm ci
-
-      # - name: Publish to target tag "release-a"
-      #   run: npx lerna publish --dist-tag release-a --canary --preid release-a -y
+      - name: Publish to target tag based off of branch name
+        run: npx lerna publish --dist-tag ${{ env.SYNCED_RELEASE_TAG }} --canary --preid ${{ env.SYNCED_RELEASE_TAG }} -y
