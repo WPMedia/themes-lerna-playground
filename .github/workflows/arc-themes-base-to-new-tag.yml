@@ -10,18 +10,46 @@ on:
         required: true
 
 jobs:
-  retag:
+  validate_tags:
     name: Tag all versions of another tag this new tag
     runs-on: ubuntu-latest
     env: 
       TARGET_RELEASE_TAG: arc-themes-release-${{ github.event.inputs.target_release_tag }}
       NEW_RELEASE_TAG: arc-themes-release-${{ github.event.inputs.new_release_tag }}
-    # ensure new and target release tags match regex: 
-    # {number}.{number} per product
-    # +: Matches one or more of the preceding character.
-    # [0-9]: Matches digits
-    if: contains(github.event.inputs.target_release_tag, '[0-9]+.[0-9]+') && contains(github.event.inputs.new_release_tag, '[0-9]+.[0-9]+')
 
+    steps:
+      - name: Check target release tag name
+        id: check-target-tag
+        run: |
+          if [[ ${{ github.event.inputs.target_release_tag }} =~ ^([0-9]+)\.([0-9]+)\.?$ ]]; then
+              echo ::set-output name=match::true
+          fi
+      
+      - name: Check new release tag name
+        id: check-new-tag
+        run: |
+          if [[ ${{ github.event.inputs.new_release_tag }} =~ ^([0-9]+)\.([0-9]+)\.?$ ]]; then
+              echo ::set-output name=match::true
+          fi
+      
+      # ensure new and target release tags match regex: 
+      # {number}.{number} per product
+      # +: Matches one or more of the preceding character.
+      # [0-9]: Matches digits
+      - name: Validate release tag numbers
+        id: validate-release-tag-numbers
+        if: steps.check-target-tag.outputs.match == 'true' && steps.check-new-tag.outputs.match == 'true'
+        run: |
+          echo "Tags match correct syntax (eg, 1.18)"
+
+  retag:
+    name: Tag all versions of another tag this new tag
+    runs-on: ubuntu-latest
+    needs: validate_tags
+    env: 
+      TARGET_RELEASE_TAG: arc-themes-release-${{ github.event.inputs.target_release_tag }}
+      NEW_RELEASE_TAG: arc-themes-release-${{ github.event.inputs.new_release_tag }}
+    
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
