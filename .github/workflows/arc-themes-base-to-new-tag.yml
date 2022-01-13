@@ -35,7 +35,11 @@ jobs:
       # [0-9]: Matches digits
       - name: Validate release tag numbers
         id: validate-release-tag-numbers
-        if: steps.check-target-tag.outputs.match == 'true' && steps.check-new-tag.outputs.match == 'true'
+        if: steps.check-target-tag.outputs.match != 'true' && steps.check-new-tag.outputs.match != 'true'
+        # fail if one check fails
+        # passes by default
+        # exit 0 is pass
+        run: exit 1
 
   retag:
     name: Tag base tag to new tag
