@@ -3,10 +3,10 @@ on:
   workflow_dispatch:
     inputs:
       target_release_tag:
-        description: 'Base tag (eg, 1.18 if 1.18 -> 1.19)'
+        description: 'Base tag (eg, 1.18 if arc-themes-release-1.18 -> arc-themes-release-1.19)'
         required: true
       new_release_tag:
-        description: 'New tag (eg, 1.19 if 1.18 -> 1.19)'
+        description: 'New tag (eg, 1.19 if arc-themes-release-1.18 -> arc-themes-release-1.19)'
         required: true
 
 jobs:
