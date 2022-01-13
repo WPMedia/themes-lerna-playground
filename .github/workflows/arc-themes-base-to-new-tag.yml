@@ -1,4 +1,4 @@
-name: Tag all versions of another arc themes release tag this arc themes release new tag 
+name: Arc themes tag all versions of another arc themes release tag this arc themes release new tag 
 on: 
   workflow_dispatch:
     inputs:
