@@ -2,16 +2,19 @@ name: Publish to target tag based off of branch name
 on:
   push:
     branches:
+      # only run on branch names that match:
+      # arc-themes-release-{numbers}.{numbers} per product
       - arc-themes-release-[0-9]+\.[0-9]+
     # only run on changes to these files
-    # paths:
-    #   - '**.js'
+    paths:
+      - '**.js'
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     env:
       NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
+      SYNCED_RELEASE_TAG: ${{ github.event.ref }}
     steps:
       - name: Set git username
         run: git config --global user.email "jack.howard@washpost.com" && git config --global user.name "Jack Howard"
@@ -22,6 +25,12 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.NODE_AUTH_TOKEN }}
         
+      - name: Show branch names
+        run: |
+          echo "ref_name"
+          echo github.ref_name
+          echo "ref"
+          echo github.ref
       # pulls all tags (needed for lerna / semantic release to correctly version)
       # - name: Pull tags to give lerna access to git info
       #   run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
