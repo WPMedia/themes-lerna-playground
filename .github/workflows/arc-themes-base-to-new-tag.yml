@@ -36,11 +36,9 @@ jobs:
       - name: Validate release tag numbers
         id: validate-release-tag-numbers
         if: steps.check-target-tag.outputs.match == 'true' && steps.check-new-tag.outputs.match == 'true'
-        run: |
-          echo "Tags match correct syntax (eg, 1.18)"
 
   retag:
-    name: Tag all versions of another tag this new tag
+    name: Tag base tag to new tag
     runs-on: ubuntu-latest
     needs: validate_tags
     env: 
