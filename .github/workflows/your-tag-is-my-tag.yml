@@ -27,23 +27,7 @@ jobs:
           node-version: '12'
           registry-url: 'https://npm.pkg.github.com'
           
-
-      # - name: Install lerna
-      #   run: npm i -g lerna
-
-      # - name: Show versions of target tag 
-      #   run: lerna ls --all --json | jq -r '.[] | .version' | grep ${{ env.TARGET_RELEASE_TAG }}
-
-      # https://github.com/lerna/lerna/issues/2058#issuecomment-487783429
-      # - name: Retag 
-      #   run: npx lerna exec --stream --no-bail --concurrency 1 -- 'PKG_VERSION=$(npm v . dist-tags.next); [ -n "$PKG_VERSION" ] && ( npm dist-tag add ${LERNA_PACKAGE_NAME}@${PKG_VERSION} latest && npm dist-tag rm $LERNA_PACKAGE_NAME next ) || exit 0'
-
-      # - name: Show versions of target individual one
-      #   run: npx lerna exec --no-bail --parallel -- npm view \${LERNA_PACKAGE_NAME}@${{ env.TARGET_RELEASE_TAG }} version
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Get version of target tag and point the new tag to that version
-        run: npx lerna exec --stream --no-bail --concurrency 1 -- 'PKG_VERSION=$(npm v . dist-tags.${{ env.TARGET_RELEASE_TAG }}); [ -n "$PKG_VERSION" ] && ( npm dist-tag add ${LERNA_PACKAGE_NAME}@${PKG_VERSION} ${{ env.NEW_RELEASE_TAG }} ) || exit 0'
+        run: npx lerna exec --stream --no-bail --concurrency 1 -- 'PKG_VERSION=$(npm v . dist-tags.${{ env.TARGET_RELEASE_TAG }}); [ -n "$PKG_VERSION" ] && (npm dist-tag add ${LERNA_PACKAGE_NAME}@${PKG_VERSION} ${{ env.NEW_RELEASE_TAG }}) || exit 0'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
