@@ -14,7 +14,8 @@
       "registry": "https://npm.pkg.github.com",
       "allowBranch": [
         "stable",
-        "canary"
+        "canary",
+        "arc-themes-release-1.19"
       ]
     }
   }
