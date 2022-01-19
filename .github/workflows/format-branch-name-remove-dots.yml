@@ -15,7 +15,11 @@ jobs:
     steps:
       - name: Get branch without dots
         id: format-version
-        run: echo "::set-output name=version::$("${{ env.SYNCED_RELEASE_TAG }}".replace('.', '-'))"
+        # message='The secret code is 12345'
+        # echo "${message//[0-9]/X}"           
+        # prints 'The secret code is XXXXX'
+        # "s/[original]/[target]/g"
+        run: echo "::set-output name=version::$(echo "${${{ env.SYNCED_RELEASE_TAG }}//./-}")"
 
       - name: Show get version
         id: show-version
