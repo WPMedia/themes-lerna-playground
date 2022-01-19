@@ -13,6 +13,9 @@ jobs:
       SYNCED_RELEASE_TAG: ${{ github.ref_name }} # targets branch name ref_name
 
     steps:
+      - name: Show example
+        run: echo "${'The secret code is 1234'//[0-9]/X}"
+
       - name: Get branch without dots
         id: format-version
         # message='The secret code is 12345'
