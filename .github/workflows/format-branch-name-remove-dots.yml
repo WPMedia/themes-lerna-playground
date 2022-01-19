@@ -1,0 +1,22 @@
+name: Format test
+on:
+  push:
+    branches:
+      - CI-format-branch-name-1.19
+
+
+jobs:
+  format:
+    name: format
+    runs-on: ubuntu-latest
+    env:
+      SYNCED_RELEASE_TAG: ${{ github.ref_name }} # targets branch name ref_name
+
+    steps:
+      - name: Get branch without dots
+        id: format-version
+        run: echo "::set-output name=version::$(${{ env.SYNCED_RELEASE_TAG }}.replace(/\./g, '-'))"
+
+      - name: Show get version
+        id: show-version
+        run: echo ${{ steps.format-version.outputs.version }} "${{ steps.format-version.outputs.version }}"
