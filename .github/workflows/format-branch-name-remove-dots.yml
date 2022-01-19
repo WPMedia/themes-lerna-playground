@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Show example
-        run: echo "${'The secret code is 1234'//[0-9]/X}"
+        run: echo "${'f,f,f'//,/$'\n'}"
 
       - name: Get branch without dots
         id: format-version
