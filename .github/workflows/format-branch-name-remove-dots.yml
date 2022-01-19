@@ -13,8 +13,17 @@ jobs:
       SYNCED_RELEASE_TAG: ${{ github.ref_name }} # targets branch name ref_name
 
     steps:
-      - name: Show example
-        run: echo "${'f,f,f'//,/$'\n'}"
+      - name: Example find and replace
+        id: example
+        run: |
+          ref="${SYNCED_RELEASE_TAG//./-}"
+
+          echo $ref
+
+          echo "::set-output name=ref::$ref"
+        
+      - run: |
+          echo "${{ steps.example.outputs.ref }}"
 
       - name: Get branch without dots
         id: format-version
