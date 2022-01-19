@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Get branch without dots
         id: format-version
-        run: echo "::set-output name=version::$("${{ env.SYNCED_RELEASE_TAG }}".replace(/\./g, '-'))"
+        run: echo "::set-output name=version::$("${{ env.SYNCED_RELEASE_TAG }}".replace('.', '-'))"
 
       - name: Show get version
         id: show-version
