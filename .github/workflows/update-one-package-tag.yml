@@ -1,0 +1,6 @@
+name: Update one package of the monorepo
+on: [workflow_dispatch]
+
+jobs:
+  tag:
+    uses: wpmedia/github-actions-helpers/.github/workflows/tag-another-tags-version.yml@main
