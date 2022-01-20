@@ -4,3 +4,8 @@ on: [workflow_dispatch]
 jobs:
   tag:
     uses: wpmedia/github-actions-helpers/.github/workflows/tag-another-tags-version.yml@main
+    with:
+      base_tag: canary
+      new_tag: stable
+      package_name: "@wpmedia/description"
+
