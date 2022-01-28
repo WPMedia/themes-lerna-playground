@@ -8,10 +8,11 @@ jobs:
   chromatic-deployment:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository, Setup Node, Cache Dependencies.
+      - name: Checkout repository.
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0 # 👈 Required to retrieve git history
+      - name: Setup Node, Cache Dependencies.
       - uses: actions/setup-node@v2
         with:
           node-version: "12"
@@ -20,7 +21,4 @@ jobs:
 
 
       - name: Install Dependencies.
-        if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
