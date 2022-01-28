@@ -1,6 +1,6 @@
 # .github/workflows/cache-dependencies.yml
 
-name: 'Test Depdendency Caching'
+name: 'Test Dependency Caching'
 
 on: push
 
@@ -8,17 +8,13 @@ jobs:
   chromatic-deployment:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository.
       - uses: actions/checkout@v2
+        name: Checkout repository.
         with:
           fetch-depth: 0 # 👈 Required to retrieve git history
       - name: Setup Node, Cache Dependencies.
-      - uses: actions/setup-node@v2
+        uses: actions/setup-node@v2
         with:
           node-version: "12"
           registry-url: "https://npm.pkg.github.com"
-      - run: npm install
-
-
-      - name: Install Dependencies.
-        run: npm ci
+      - run: npm ci
