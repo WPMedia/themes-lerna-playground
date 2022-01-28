@@ -17,7 +17,7 @@ Goals:
 
 
 ## scripts 
-
+- test
 
 
 ### `npm run release:stable`
