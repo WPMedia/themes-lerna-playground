@@ -35,8 +35,6 @@ Changes:
  - @JackHowa/headline: 1.1.1 => 1.1.1-canary.1
  - @JackHowa/sub-headline (no change)
 
-
-
 # References 
 
 - Fetch depth lerna issue https://stackoverflow.com/a/60184319/7491536
