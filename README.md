@@ -15,7 +15,6 @@ Goals:
 - [x] On merging stable back to canary, we should ignore changes to package.json. Otherwise, all changed blocks will need to be republished to canary again and the cycle will go on and on. yes! https://github.com/JackHowa/lerna-monorepo-components/runs/3126310013?check_suite_focus=true
 - [ ] If merging into another branch, the approver needs to have write access. But this doesn't seem to be toggleable inside of a non-org repo. https://github.com/JackHowa/lerna-monorepo-components/runs/3126597880?check_suite_focus=true https://github.com/JackHowa/lerna-monorepo-components/pull/6
 
-
 ## scripts 
 
 
