@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "license": "MIT",
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "lerna": "^4.0.0",
+    "lodash.get": "^4.4.2"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
