@@ -1,7 +1,7 @@
 {
   "name": "lerna-monorepo-practice",
   "repository": "https://github.com/JackHowa/lerna-monorepo-components",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "devDependencies": {
     "lerna": "^4.0.0"
