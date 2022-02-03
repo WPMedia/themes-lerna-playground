@@ -12,5 +12,8 @@
   "scripts": {
     "release:stable": "lerna publish --dist-tag stable minor -y",
     "release:canary": "lerna publish --dist-tag canary --canary --preid canary -y"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
   }
 }
