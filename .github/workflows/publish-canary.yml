@@ -14,6 +14,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
         with:
+          fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # pulls all tags (needed for lerna / semantic release to correctly version)
