@@ -2,7 +2,7 @@ import React from 'react';
 
 function Headline() {
   return (
-    <h1>Only headline update one block first after for release-a</h1>
+    <h1>Publish to canary</h1>
   );
 }
 
