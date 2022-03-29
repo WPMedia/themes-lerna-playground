@@ -17,6 +17,12 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12"
+          registry-url: "https://npm.pkg.github.com"
+
       # pulls all tags (needed for lerna / semantic release to correctly version)
       - name: Pull tags to give lerna access to git info
         run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
