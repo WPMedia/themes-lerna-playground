@@ -10,8 +10,6 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    env:
-      NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
     steps:
       - name: Set git username
         run: git config --global user.email "jack.howard@washpost.com" && git config --global user.name "Jack Howard"
