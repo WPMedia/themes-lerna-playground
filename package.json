@@ -1,5 +1,5 @@
 {
-  "name": "lerna-monorepo-practice",
+  "name": "@wpmedia/lerna-monorepo-practice",
   "repository": "https://github.com/JackHowa/lerna-monorepo-components",
   "version": "1.0.0",
   "license": "MIT",
