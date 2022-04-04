@@ -1,6 +1,6 @@
 {
   "name": "@wpmedia/lerna-monorepo-practice",
-  "repository": "https://github.com/JackHowa/lerna-monorepo-components",
+  "repository": "https://github.com/WPMedia/themes-lerna-playground",
   "version": "1.0.0",
   "license": "MIT",
   "devDependencies": {
