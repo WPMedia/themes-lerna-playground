@@ -7,7 +7,7 @@ on:
 
 jobs:
   publish:
-    name: Canary build publish
+    name: Alpha build publish and push
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
@@ -47,6 +47,6 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
 
-      - run: git push origin canary -f
+      - run: git push origin alpha -f
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
