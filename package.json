@@ -1,7 +1,7 @@
 {
   "name": "@wpmedia/lerna-monorepo-practice",
   "repository": "https://github.com/WPMedia/themes-lerna-playground",
-  "version": "1.0.1",
+  "version": "1.0.2-alpha.0",
   "license": "MIT",
   "devDependencies": {
     "lerna": "^4.0.0"
