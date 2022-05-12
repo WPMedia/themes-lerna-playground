@@ -1,7 +1,5 @@
 # lerna-monorepo-components
 
-1.21.1 Testing
-
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
 
 Published here https://www.npmjs.com/package/@thrash-industries/headline
